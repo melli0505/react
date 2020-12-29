@@ -4,8 +4,8 @@ import React, { Component } from "react";
 
 class EventPractice extends Component {
   static state = {
-    username: '',
-    message: '',
+    username: "",
+    message: "",
   };
   //binding = 원래 메소드에서는 this에 접근할 수 없는데, 이것을 가능하도록 묶어주는 역할. 생성자에서 실행(정석)
   constructor(props) {
@@ -17,22 +17,22 @@ class EventPractice extends Component {
 
   handleChange(e) {
     this.setState({
-      [e.target.name]:e.target.value //[]안에 든 값을 key로 쓴다는 뜻. 
+      [e.target.name]: e.target.value, //[]안에 든 값을 key로 쓴다는 뜻.
     });
   }
 
   handleClick() {
-    alert(this.state.username + ' : ' + this.state.message);
+    alert(this.state.username + " : " + this.state.message);
     this.setState({
-      username: '',
-      message: '',
+      username: "",
+      message: "",
     });
   }
 
   handleKeys(e) {
-      if(e.key == 'Enter'){
-          this.handleClick();
-      }
+    if (e.key == "Enter") {
+      this.handleClick();
+    }
   }
 
   // 메소드에 관한 다른 방법(without constructor), transform class properties 방식
@@ -48,6 +48,12 @@ class EventPractice extends Component {
     this.setState({
       message: "",
     });
+  }
+
+  handleKeys = (e) => {
+      if(e.key == 'Enter'){
+          this.handleClick();
+      }
   }
   */
   render() {
