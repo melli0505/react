@@ -21,7 +21,7 @@ class ScrollBox extends Component{
         const innerStyle = {
             width: '100%',
             height: '650px',
-            background: 'linear-gradient(pink, violet)'
+            background: `linear-gradient(pink, violet)` // ``사이에 값을 넣고 ${}을 이용하면 css 안에 변수 넣기 가능
         }
         return(
             <div 
