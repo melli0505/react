@@ -1,0 +1,18 @@
+/* 자동으로 고유해질 거라 흔히 쓰는 단어 막 써도 됨 */
+.wrapper{
+    background: black;
+    padding: 1rem;
+    color: white;
+    font-size: 2rem;
+    &.inverted{ // inverted가 wrapper와 함께 사용했을 때만 
+        color: black;
+        background: white;
+        border: 1px solid black;
+    }
+}
+
+/* 글로벌 css 작성시 */
+:global .something{
+    font-weight: 800;
+    color: aqua;
+}

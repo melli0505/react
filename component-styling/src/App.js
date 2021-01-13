@@ -1,11 +1,15 @@
 // import logo from './logo.svg';
 import './App.css';
+import CSSModule from './CSSModule';
 import SassComponent from'./SassComponent';
+import StyledComponent from './Styled-component';
 
 function App() {
   return (
     <div>
-      <SassComponent></SassComponent>
+      <StyledComponent></StyledComponent>
+      {/* <CSSModule></CSSModule> */}
+      {/* <SassComponent></SassComponent> */}
     </div>
   );
 }
