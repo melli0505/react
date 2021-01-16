@@ -6,6 +6,27 @@ import ValidationSample from "./ValidationSample.js";
 import ScrollBox from "./ScrollBox";
 // 이 개념 이해 필요
 class App extends Component {
+  state = {
+    upDown: 'u',
+    value: 'to Bottom'
+  };
+
+  upOrDwon = () => {
+    if(this.state.upDown === 'u'){
+      this.setState({
+        upDown: 'd',
+        value: 'to Top'
+      });
+    }
+    else{
+      this.setState({
+        upDown: 'u',
+        value: 'to Bottom'
+      });
+    }
+  };
+
+
   render() {
     const sizedbox = { height: '10px'};
     const margins = {marginLeft: '20px'}
@@ -16,7 +37,10 @@ class App extends Component {
         <ValidationSample />
         <div style = {sizedbox}></div>
         <ScrollBox ref = {(ref)=>{this.scrollBox=(ref)}}/> 
-        <button onClick={() => this.scrollBox.scrollToBottom()}> 맨 아래로 </button>
+        <button onClick={() => {
+          this.scrollBox.scrollTo(this.state.upDown);
+          this.upOrDwon();
+          }}> 이동 </button>
       </div>
     );
   }

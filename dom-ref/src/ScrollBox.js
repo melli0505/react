@@ -8,6 +8,18 @@ class ScrollBox extends Component{
         this.box.scrollTop = scrollHeight - ClientHeight; 
     }
 
+    scrollTo = (upDown) => {
+        const scrollHeight = this.box.scrollHeight;
+        const ClientHeight = this.box.clientHeight;
+        if(upDown === 'u'){
+            this.box.scrollTop = scrollHeight - ClientHeight;
+        }
+        else{
+            this.box.scrollTop = 0;
+        }
+    }
+
+
     render(){
         const style = {
             border: '1px solid black',
