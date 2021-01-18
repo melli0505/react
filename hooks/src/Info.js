@@ -1,4 +1,5 @@
 import React, {Component, useEffect, useReducer, useState} from 'react';
+import useInputs from './useInputs';
 
 function reducer(state, action){
     return {
@@ -9,11 +10,19 @@ function reducer(state, action){
 
 const Info = () => {
     // const [name, setName] = useState('');
+
     // const [nickName, setNickName] = useState('');
-    const  [state, dispatch] = useReducer(reducer, {
+
+    // const  [state, dispatch] = useReducer(reducer, {
+    //     name: '',
+    //     nickname: ''
+    // });
+
+    // custom hook
+    const [state, dispatch] = useInputs({
         name: '',
         nickname: ''
-    });
+    })
 
     const [name, nickname] = state;
 
