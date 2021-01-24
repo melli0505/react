@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Post from "./components/Post";
+import { useCallback, useEffect, useRef, useState } from "react";
+import Liked from "./components/Liked";
 
-function App() {
+const App = () => {
+  // const [like, setLike] = useState({ liked: true });
+  // const onClicked = () => {
+  //   useEffect(()=> {
+  //     if(like){
+  //       setLike(false);
+  //     }
+  //     else{
+  //       setLike(true);
+  //     }
+  //   });
+  // };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Post></Post>
+      <Liked></Liked>
     </div>
-  );
-}
+  )
+};
 
 export default App;
