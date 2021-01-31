@@ -1,0 +1,55 @@
+// .around{
+//     margin-left: 100px;
+//     margin-right: 100px;
+//     border-radius: 4px;
+//     overflow: hidden;
+//     background: #fafafa;
+//     border: 0.4px solid #192b1c;
+// }
+.CommentListItem {
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 4px;
+    overflow: hidden;
+    background:  #344437;
+    border: 0.6px solid #a0b9a5;
+    display: flex;
+    padding: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.text{
+    width: 941px;
+    color: white;
+    text-indent: 10px;
+    line-height: 30px;
+    font-family: 'KoPub Batang', serif;
+    margin: 10px;
+    font-weight: 100;
+}
+.icons{
+    margin: 5px;
+    display: flex;
+    svg{
+        color: rgb(212, 212, 212);
+        font-size: 1.5rem;
+    }
+}
+
+.person{
+    display: flex;
+    justify-content: center;
+    margin:12px;
+}
+.remove{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.remove:hover{
+    svg{
+        color:  rgb(199, 72, 72);
+    }
+}
