@@ -1,16 +1,14 @@
-import React, {useState} from 'react';
-import axios from 'axios';
-import NewsList from './components/NewsList';
+import React, {useState, useCallback} from 'react';
+import { Route } from 'react-router-dom';
+import NewsPage from './pages/NewsPage';
 
 const App = () =>{
-  const [data, setData] = useState(null);
-  const onClick = async () => {
-    const response = await axios.get('http://newsapi.org/v2/top-headlines?country=kr&category=science&apiKey=2240b244bccf4a5ba26330614e1840d0').then(response => {
-      setData(response.data);
-    });
-  };
+  // category 초기 설정(사용x)
+  const [category, setCategory] = useState('all');
+  const onSelect = useCallback(category => setCategory(category), []);
+  
   return (
-    <NewsList />
+    <Route path="/:category?" component={NewsPage}></Route> // ? : category 값은 선택적이라는 뜻
   );
 };
 
