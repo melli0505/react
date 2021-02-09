@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// style
 const NewsItemBlock = styled.div`
     display: flex;
     .thumbnail {
@@ -38,6 +39,8 @@ const NewsItem = ({ article }) => {
         <NewsItemBlock>
             {urlToImage && (
                 <div className="thumbnail">
+                    {/* noreferrer 사용자가 하이퍼링크를 클릭할 때 브라우저가 HTTP 리퍼러 헤더(referer header)를 전송해서는 안 됨을 나타냄. */}
+                    {/* noopener 하이퍼링크를 따라 연결되는 어떠한 브라우징 컨텍스트(browsing context)도 오프너(opener)여서는 안 됨을 나타냄. */}
                     <a href={url} target="_blank" rel="noopener noreferrer">
                         <img src={urlToImage} alt="thumbnail" />
                     </a>
